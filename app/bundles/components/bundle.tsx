@@ -60,17 +60,16 @@ export default function Bundle({ id, name, products }: BundleProps) {
           </ul>
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-4">
+        <div className="">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
               Bundle total
             </p>
-            <p className="text-3xl font-semibold text-slate-950">
+            <p className="flex justify-between items-center text-3xl font-semibold text-slate-950">
               {totalPrice} ISK
+              <AddBundleButton products={products} />
             </p>
-          </div>
-
-          <AddBundleButton products={products} />
+          </div> 
         </div>
       </div>
     </article>
