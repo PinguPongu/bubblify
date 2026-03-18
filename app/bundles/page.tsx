@@ -1,7 +1,7 @@
 import Bundle from "./components/bundle";
-import { getBundles, getProducts, type Product } from "@/lib/api";
+import { getBundles, getProducts, type Bubble } from "@/lib/api";
 
-function isProduct(product: Product | undefined): product is Product {
+function isProduct(product: Bubble | undefined): product is Bubble {
   return product !== undefined;
 }
 

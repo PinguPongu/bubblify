@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { addProductsToCart, CART_STORAGE_KEY, type CartItem } from "@/lib/cart";
 import type { Bubble } from "@/lib/api";
+import { addProductsToCart, CART_STORAGE_KEY, type CartItem } from "@/lib/cart";
 
-interface AddBundleButtonProps {
-  /** The products included in the selected bundle. */
-  products: Bubble[];
+interface AddToCartButtonProps {
+  /** The product that should be added to the cart. */
+  product: Bubble;
 }
 
-export default function AddBundleButton({
-  products,
-}: AddBundleButtonProps) {
+export default function AddToCartButton({
+  product,
+}: AddToCartButtonProps) {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleClick = () => {
@@ -26,7 +26,7 @@ export default function AddBundleButton({
       }
     }
 
-    const nextItems = addProductsToCart(parsedItems, products);
+    const nextItems = addProductsToCart(parsedItems, [product]);
 
     window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(nextItems));
     setIsAdded(true);
@@ -40,9 +40,9 @@ export default function AddBundleButton({
     <button
       type="button"
       onClick={handleClick}
-      className="rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
+      className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600"
     >
-      {isAdded ? "Added to cart" : "Add Bundle to Cart"}
+      {isAdded ? "Added to cart" : "Add to cart"}
     </button>
   );
 }

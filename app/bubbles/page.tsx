@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bubble } from "@/app/types/types";
+import { Bubble } from "@/lib/api";
 
 const API_URL = process.env.API_URL ?? "http://localhost:3500/api";
 

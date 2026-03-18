@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Product } from "@/lib/api";
+import type { Bubble } from "@/lib/api";
 import AddBundleButton from "./add-bundle-button";
 
 interface BundleProps {
@@ -8,15 +8,9 @@ interface BundleProps {
   /** The marketing name of the bundle. */
   name: string;
   /** The products included in the bundle. */
-  products: Product[];
+  products: Bubble[];
 }
 
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(price / 100);
-}
 
 export default function Bundle({ id, name, products }: BundleProps) {
   const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
@@ -59,7 +53,7 @@ export default function Bundle({ id, name, products }: BundleProps) {
               >
                 <span>{product.name}</span>
                 <span className="font-medium text-slate-950">
-                  {formatPrice(product.price)}
+                  {product.price} ISK
                 </span>
               </li>
             ))}
@@ -72,7 +66,7 @@ export default function Bundle({ id, name, products }: BundleProps) {
               Bundle total
             </p>
             <p className="text-3xl font-semibold text-slate-950">
-              {formatPrice(totalPrice)}
+              {totalPrice} ISK
             </p>
           </div>
 
