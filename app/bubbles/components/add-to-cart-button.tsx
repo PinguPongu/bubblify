@@ -5,7 +5,6 @@ import type { Bubble } from "@/lib/api";
 import { addProductsToCart, CART_STORAGE_KEY, type CartItem } from "@/lib/cart";
 
 interface AddToCartButtonProps {
-  /** The product that should be added to the cart. */
   product: Bubble;
 }
 
@@ -40,7 +39,7 @@ export default function AddToCartButton({
     <button
       type="button"
       onClick={handleClick}
-      className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600"
+      className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-700"
     >
       {isAdded ? "Added to cart" : "Add to cart"}
     </button>

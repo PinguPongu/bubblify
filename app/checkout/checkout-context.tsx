@@ -20,26 +20,17 @@ export interface CustomerInfo {
 }
 
 interface CheckoutContextValue {
-  /** Whether checkout data has been loaded on the client. */
   hasHydrated: boolean;
-  /** The selected delivery method for the order. */
   deliveryMethod: DeliveryMethod | null;
-  /** The customer info collected during checkout. */
   customerInfo: CustomerInfo;
-  /** The current cart items being checked out. */
   cartItems: CartItem[];
-  /** The combined price of all cart items. */
   totalPrice: number;
-  /** Sets the selected delivery method. */
   setDeliveryMethod: (method: DeliveryMethod) => void;
-  /** Merges customer information into the stored checkout state. */
   updateCustomerInfo: (nextInfo: Partial<CustomerInfo>) => void;
-  /** Clears the stored checkout state after a successful order. */
   clearCheckout: () => void;
 }
 
 interface CheckoutProviderProps {
-  /** The nested checkout pages that should share the same state. */
   children: ReactNode;
 }
 

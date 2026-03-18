@@ -36,7 +36,7 @@ export default function DeliveryPage() {
 
   if (!hasHydrated) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <p className="text-base text-slate-600">Loading checkout...</p>
       </section>
     );
@@ -44,7 +44,7 @@ export default function DeliveryPage() {
 
   if (cartItems.length === 0) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <h2 className="text-2xl font-semibold text-slate-950">
           Your cart is empty
         </h2>
@@ -53,7 +53,7 @@ export default function DeliveryPage() {
         </p>
         <Link
           href="/bubbles"
-          className="mt-6 inline-flex rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+          className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
         >
           Browse products
         </Link>
@@ -71,13 +71,13 @@ export default function DeliveryPage() {
             key={option.value}
             type="button"
             onClick={() => setDeliveryMethod(option.value)}
-            className={`rounded-[1.75rem] border p-6 text-left shadow-sm transition ${
+            className={`rounded-3xl border p-6 text-left transition ${
               isSelected
-                ? "border-sky-400 bg-sky-50"
-                : "border-slate-200 bg-white hover:border-sky-200 hover:bg-sky-50/50"
+                ? "border-sky-500 bg-slate-50"
+                : "border-slate-200 bg-white hover:border-slate-300"
             }`}
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
               Option
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-slate-950">
@@ -95,7 +95,7 @@ export default function DeliveryPage() {
           type="button"
           onClick={handleContinue}
           disabled={!deliveryMethod}
-          className="rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:bg-slate-300"
+          className="rounded-full bg-sky-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-700 disabled:cursor-not-allowed disabled:bg-slate-300"
         >
           Continue to information
         </button>

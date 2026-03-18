@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { getOrdersByTelephone } from "@/lib/api";
 
 interface OrderDetailsPageProps {
-  /** The route params for the telephone-specific orders page. */
   params: Promise<{
     telephone: string;
   }>;
@@ -30,8 +29,8 @@ export default async function OrderDetailsPage({
   return (
     <main className="px-6 py-10 text-slate-950">
       <div className="mx-auto flex max-w-5xl flex-col gap-8">
-        <section className="rounded-[2rem] border border-white/70 bg-white/85 px-8 py-10 shadow-[0_24px_80px_rgba(56,189,248,0.10)] backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">
+        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-700">
             Order history
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -54,11 +53,11 @@ export default async function OrderDetailsPage({
           {orders.map((order, index) => (
             <article
               key={`${order.createdAt}-${index}`}
-              className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm"
+              className="rounded-3xl border border-slate-200 bg-white p-8"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
                     Order {index + 1}
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
@@ -77,7 +76,7 @@ export default async function OrderDetailsPage({
                   ) : null}
                 </div>
 
-                <div className="rounded-2xl bg-slate-50 px-4 py-3">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
                     Total
                   </p>
@@ -91,7 +90,7 @@ export default async function OrderDetailsPage({
                 {order.items.map((item) => (
                   <li
                     key={item.id}
-                    className="flex items-center justify-between gap-4 rounded-2xl bg-slate-50 px-4 py-4 text-sm text-slate-600"
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-600"
                   >
                     <span>
                       {item.name} x {item.quantity}

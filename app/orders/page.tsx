@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { getOrdersByTelephone } from "@/lib/api";
 
 interface OrdersPageProps {
-  /** The search params forwarded to the orders landing page. */
   searchParams: Promise<{
     telephone?: string;
   }>;
@@ -34,8 +33,8 @@ export default async function OrdersPage({ searchParams }: OrdersPageProps) {
   return (
     <main className="px-6 py-10 text-slate-950">
       <div className="mx-auto flex max-w-4xl flex-col gap-8">
-        <section className="rounded-[2rem] border border-white/70 bg-white/85 px-8 py-10 shadow-[0_24px_80px_rgba(56,189,248,0.10)] backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">
+        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-700">
             Orders
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -47,7 +46,7 @@ export default async function OrdersPage({ searchParams }: OrdersPageProps) {
           </p>
         </section>
 
-        <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+        <section className="rounded-3xl border border-slate-200 bg-white p-8">
           <form className="flex flex-col gap-4 sm:flex-row sm:items-end">
             <label className="flex-1">
               <span className="mb-2 block text-sm font-medium text-slate-700">
@@ -64,7 +63,7 @@ export default async function OrdersPage({ searchParams }: OrdersPageProps) {
 
             <button
               type="submit"
-              className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+              className="rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
             >
               Search orders
             </button>

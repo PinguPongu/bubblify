@@ -17,19 +17,21 @@ export default async function Bundles() {
   }));
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.28),_transparent_28%),linear-gradient(180deg,_#f8fbff_0%,_#eef6ff_52%,_#f8fafc_100%)] px-6 py-16 text-slate-950">
+    <main className="px-6 py-10 text-slate-950">
       <div className="mx-auto flex max-w-6xl flex-col gap-12">
-        <section className="max-w-3xl space-y-4">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">
+        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
+          <div className="max-w-3xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">
             Bundles
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Pick the bubble bundle that fits the moment.
-          </h1>
-          <p className="text-lg leading-8 text-slate-600">
-            These ready-made sets pull together multiple bubble products into a
-            single purchase. Add a whole bundle to cart in one click.
-          </p>
+            </p>
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+              Pick the bubble bundle that fits the moment.
+            </h1>
+            <p className="text-lg leading-8 text-slate-600">
+              These ready-made sets pull together multiple bubble products into a
+              single purchase. Add a whole bundle to cart in one click.
+            </p>
+          </div>
         </section>
 
         <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

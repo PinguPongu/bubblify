@@ -86,8 +86,8 @@ export default function CartPage() {
   return (
     <main className="px-6 py-10 text-slate-950">
       <div className="mx-auto flex max-w-6xl flex-col gap-8">
-        <section className="rounded-[2rem] border border-white/70 bg-white/85 px-8 py-10 shadow-[0_24px_80px_rgba(56,189,248,0.10)] backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">
+        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-700">
             Cart
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -100,11 +100,11 @@ export default function CartPage() {
         </section>
 
         {!hasLoaded ? (
-          <section className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+          <section className="rounded-3xl border border-slate-200 bg-white p-8">
             <p className="text-base text-slate-600">Loading cart...</p>
           </section>
         ) : cartItems.length === 0 ? (
-          <section className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+          <section className="rounded-3xl border border-slate-200 bg-white p-8">
             <h2 className="text-2xl font-semibold text-slate-950">
               Your cart is empty
             </h2>
@@ -114,7 +114,7 @@ export default function CartPage() {
             </p>
             <Link
               href="/bubbles"
-              className="mt-6 inline-flex rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+              className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
             >
               Browse products
             </Link>
@@ -125,7 +125,7 @@ export default function CartPage() {
               {cartItems.map((item) => (
                 <article
                   key={item.id}
-                  className="grid gap-5 rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[140px_1fr]"
+                  className="grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 sm:grid-cols-[140px_1fr]"
                 >
                   <div className="relative aspect-square overflow-hidden rounded-[1.25rem] bg-slate-50">
                     <Image
@@ -189,8 +189,8 @@ export default function CartPage() {
               ))}
             </section>
 
-            <aside className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+            <aside className="h-fit rounded-3xl border border-slate-200 bg-white p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
                 Summary
               </p>
               <div className="mt-6 space-y-4">
@@ -213,7 +213,7 @@ export default function CartPage() {
               <button
                 type="button"
                 onClick={proceedToCheckout}
-                className="mt-8 w-full rounded-full bg-sky-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-sky-600"
+                className="mt-8 w-full rounded-full bg-sky-600 px-5 py-3 text-base font-semibold text-white transition hover:bg-sky-700"
               >
                 Proceed to checkout
               </button>

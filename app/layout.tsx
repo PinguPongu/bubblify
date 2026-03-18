@@ -14,10 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-slate-950">
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.18),_transparent_24%),linear-gradient(180deg,_#f8fbff_0%,_#f4f9ff_38%,_#ffffff_100%)]">
-
-          <Navbar/>
+      <body className="min-h-screen bg-slate-50 text-slate-950">
+        <div className="min-h-screen">
+          <Navbar />
           {children}
         </div>
       </body>

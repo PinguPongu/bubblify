@@ -77,7 +77,7 @@ export default function CheckoutInfoPage() {
 
   if (!hasHydrated) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <p className="text-base text-slate-600">Loading checkout...</p>
       </section>
     );
@@ -85,7 +85,7 @@ export default function CheckoutInfoPage() {
 
   if (cartItems.length === 0) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <h2 className="text-2xl font-semibold text-slate-950">
           Your cart is empty
         </h2>
@@ -94,7 +94,7 @@ export default function CheckoutInfoPage() {
         </p>
         <Link
           href="/bubbles"
-          className="mt-6 inline-flex rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+          className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
         >
           Browse products
         </Link>
@@ -103,8 +103,8 @@ export default function CheckoutInfoPage() {
   }
 
   return (
-    <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+    <section className="rounded-3xl border border-slate-200 bg-white p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
         Customer details
       </p>
       <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
@@ -206,7 +206,7 @@ export default function CheckoutInfoPage() {
           </Link>
           <button
             type="submit"
-            className="rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+            className="rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
           >
             Continue to review
           </button>

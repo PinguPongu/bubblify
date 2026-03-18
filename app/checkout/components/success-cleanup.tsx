@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { useCheckout } from "../checkout-context";
 
 interface SuccessCleanupProps {
-  /** The telephone number attached to the completed order. */
   telephone?: string;
 }
 
@@ -25,8 +24,8 @@ export default function SuccessCleanup({
   }, [clearCheckout]);
 
   return (
-    <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+    <section className="rounded-3xl border border-slate-200 bg-white p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
         Success
       </p>
       <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
@@ -45,7 +44,7 @@ export default function SuccessCleanup({
       <div className="mt-8 flex flex-wrap gap-4">
         <Link
           href="/orders"
-          className="rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+          className="rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
         >
           View past orders
         </Link>

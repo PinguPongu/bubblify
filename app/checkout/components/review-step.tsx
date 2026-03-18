@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useCheckout } from "../checkout-context";
 
 interface ReviewStepProps {
-  /** The server action that submits the completed order. */
   submitAction: (formData: FormData) => Promise<void>;
 }
 
@@ -37,7 +36,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
 
   if (!hasHydrated) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <p className="text-base text-slate-600">Loading checkout...</p>
       </section>
     );
@@ -45,7 +44,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
 
   if (cartItems.length === 0) {
     return (
-      <section className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <h2 className="text-2xl font-semibold text-slate-950">
           Your cart is empty
         </h2>
@@ -54,7 +53,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
         </p>
         <Link
           href="/bubbles"
-          className="mt-6 inline-flex rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600"
+          className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
         >
           Browse products
         </Link>
@@ -64,9 +63,9 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-      <section className="space-y-6 rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
             Review
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
@@ -74,14 +73,14 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
           </h2>
         </div>
 
-        <div className="space-y-3 rounded-[1.5rem] bg-slate-50 p-5">
+        <div className="space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <h3 className="text-lg font-semibold text-slate-950">Delivery</h3>
           <p className="text-sm text-slate-600">
             {deliveryMethod === "pickup" ? "Store pickup" : "Home delivery"}
           </p>
         </div>
 
-        <div className="space-y-3 rounded-[1.5rem] bg-slate-50 p-5">
+        <div className="space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <h3 className="text-lg font-semibold text-slate-950">Customer info</h3>
           <p className="text-sm text-slate-600">{customerInfo.name}</p>
           <p className="text-sm text-slate-600">{customerInfo.telephone}</p>
@@ -95,7 +94,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
           ) : null}
         </div>
 
-        <div className="space-y-3 rounded-[1.5rem] bg-slate-50 p-5">
+        <div className="space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <h3 className="text-lg font-semibold text-slate-950">Items</h3>
           <ul className="space-y-3">
             {cartItems.map((item) => (
@@ -115,8 +114,8 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
         </div>
       </section>
 
-      <aside className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+      <aside className="h-fit rounded-3xl border border-slate-200 bg-white p-6">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
           Final total
         </p>
         <p className="mt-3 text-4xl font-semibold text-slate-950">
@@ -135,7 +134,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
 
           <button
             type="submit"
-            className="w-full rounded-full bg-sky-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-sky-600"
+            className="w-full rounded-full bg-sky-600 px-5 py-3 text-base font-semibold text-white transition hover:bg-sky-700"
           >
             Confirm order
           </button>

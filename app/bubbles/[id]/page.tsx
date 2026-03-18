@@ -44,9 +44,9 @@ export default async function BubbleDetailPage({
           Back to products
         </Link>
 
-        <article className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-[0_24px_80px_rgba(15,23,42,0.10)] backdrop-blur">
+        <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="relative min-h-[360px] bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.28),_transparent_42%),linear-gradient(180deg,_#eff6ff_0%,_#ffffff_100%)]">
+            <div className="relative min-h-[360px] border-b border-slate-200 bg-slate-50 lg:border-b-0 lg:border-r">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -71,7 +71,7 @@ export default async function BubbleDetailPage({
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-[1.5rem] bg-slate-50 px-6 py-5">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5">
                   <p className="text-xs uppercase tracking-[0.24em] text-slate-400">
                     Price
                   </p>

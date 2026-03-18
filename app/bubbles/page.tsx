@@ -35,9 +35,9 @@ export default async function BubblesPage() {
           <Link
             key={product.id}
             href={`/bubbles/${product.id}`}
-            className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition hover:border-sky-300"
           >
-            <div className="relative aspect-square bg-zinc-100">
+            <div className="relative aspect-square border-b border-slate-200 bg-slate-50">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -52,7 +52,7 @@ export default async function BubblesPage() {
                 <h2 className="text-xl font-semibold text-zinc-900">
                   {product.name}
                 </h2>
-                <span className="shrink-0 rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800">
+                <span className="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700">
                   {product.price} ISK
                 </span>
               </div>
