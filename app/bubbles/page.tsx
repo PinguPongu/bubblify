@@ -1,17 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-}
+import { Bubble } from "@/app/types/types";
 
 const API_URL = process.env.API_URL ?? "http://localhost:3500/api";
 
-async function getProducts(): Promise<Product[]> {
+async function getProducts(): Promise<Bubble[]> {
   const response = await fetch(`${API_URL}/bubbles`, {
     cache: "no-store",
   });
@@ -23,13 +16,6 @@ async function getProducts(): Promise<Product[]> {
   return response.json();
 }
 
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat("is-IS", {
-    style: "currency",
-    currency: "ISK",
-    maximumFractionDigits: 0,
-  }).format(price);
-}
 
 export default async function BubblesPage() {
   const products = await getProducts();
@@ -57,7 +43,7 @@ export default async function BubblesPage() {
                 alt={product.name}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                className="object-cover transition duration-300 group-hover:scale-105"
+                className="object-cover"
               />
             </div>
 
@@ -67,7 +53,7 @@ export default async function BubblesPage() {
                   {product.name}
                 </h2>
                 <span className="shrink-0 rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800">
-                  {formatPrice(product.price)}
+                  {product.price} ISK
                 </span>
               </div>
 

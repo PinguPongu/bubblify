@@ -36,13 +36,6 @@ async function getProducts() {
     }
     return response.json();
 }
-function formatPrice(price) {
-    return new Intl.NumberFormat("is-IS", {
-        style: "currency",
-        currency: "ISK",
-        maximumFractionDigits: 0
-    }).format(price);
-}
 async function BubblesPage() {
     const products = await getProducts();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -56,7 +49,7 @@ async function BubblesPage() {
                         children: "Bubble Products"
                     }, void 0, false, {
                         fileName: "[project]/app/bubbles/page.tsx",
-                        lineNumber: 40,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -64,13 +57,13 @@ async function BubblesPage() {
                         children: "Explore the full Bubblify collection and pick your next favorite bubbles."
                     }, void 0, false, {
                         fileName: "[project]/app/bubbles/page.tsx",
-                        lineNumber: 41,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/bubbles/page.tsx",
-                lineNumber: 39,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -86,15 +79,15 @@ async function BubblesPage() {
                                     alt: product.name,
                                     fill: true,
                                     sizes: "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw",
-                                    className: "object-cover transition duration-300 group-hover:scale-105"
+                                    className: "object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/app/bubbles/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/bubbles/page.tsx",
-                                lineNumber: 54,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -108,21 +101,24 @@ async function BubblesPage() {
                                                 children: product.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/bubbles/page.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 52,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "shrink-0 rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800",
-                                                children: formatPrice(product.price)
-                                            }, void 0, false, {
+                                                children: [
+                                                    product.price,
+                                                    " ISK"
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/app/bubbles/page.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 55,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/bubbles/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 51,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,30 +126,30 @@ async function BubblesPage() {
                                         children: product.description
                                     }, void 0, false, {
                                         fileName: "[project]/app/bubbles/page.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 60,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/bubbles/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, product.id, true, {
                         fileName: "[project]/app/bubbles/page.tsx",
-                        lineNumber: 49,
+                        lineNumber: 35,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/bubbles/page.tsx",
-                lineNumber: 47,
+                lineNumber: 33,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/bubbles/page.tsx",
-        lineNumber: 38,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }

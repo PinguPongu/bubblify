@@ -1,6 +1,12 @@
-[00:00:02.338] Server  LOG     ✓ Ready in 1935ms
-[00:00:04.284] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:04.793] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.357] Server  LOG     ✓ Ready in 981ms
+[00:00:06.135] Server  LOG     ○ Compiling / ...
+[00:00:10.755] Server  ERROR   ⨯ Error: The default export is not a React Component in "/bundles/page"
+[00:00:11.265] Server  ERROR   ⨯ Error: The default export is not a React Component in "/bundles/page"
+[00:00:13.998] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/bundles/page"
+[00:00:26.330] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:27.003] Browser WARN    Image with src "https://i.imgur.com/ZiNsJOp.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:27.003] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -33,5 +39,263 @@ It can also happen if the client has a browser extension installed which messes 
 -                         data-darkreader-mode="dynamic"
 -                         data-darkreader-scheme="dark"
                         >
+                          ...
+                            <div className="grid gap-6...">
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Plain bubbles"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FZiNsJOp.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FZiNsJOp.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Wild bubbles"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2Fw9Usvcd.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2Fw9Usvcd.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Triple bubbles"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2F5ugrK8x.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2F5ugrK8x.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Bubblegum bubba-bubbles"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FXoA1hDZ.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FXoA1hDZ.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Dark matter"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2F3kIIn3i.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2F3kIIn3i.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
+                              ...
+                                <div className="relative a...">
+                                  <img
+                                    alt="Christmas bubbles"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover transition duration-300 group-hover:scale-105"
+                                    style={{
++                                     position: "absolute"
+-                                     position: "absolute"
++                                     height: "100%"
+-                                     height: "100%"
++                                     width: "100%"
+-                                     width: "100%"
++                                     left: 0
+-                                     left: "0px"
++                                     top: 0
+-                                     top: "0px"
++                                     right: 0
+-                                     right: "0px"
++                                     bottom: 0
+-                                     bottom: "0px"
++                                     objectFit: undefined
++                                     objectPosition: undefined
++                                     color: "transparent"
+-                                     color: "transparent"
+-                                     --darkreader-inline-color: "transparent"
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                    srcSet={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FUoqLLcB.png&w=256&q=75 256w..."}
+                                    src={"/_next/image?url=https%3A%2F%2Fi.imgur.com%2FUoqLLcB.png&w=3840&q=75"}
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+-                                   data-darkreader-inline-color=""
+                                  >
                   ...
 
+[00:00:47.075] Server  LOG     ✓ Compiled in 91ms
+[00:01:33.203] Browser ERROR   ./app/bubbles/page.tsx:63:33
+Parsing ecmascript source code failed
+  61 |                 </h2>
+  62 |                 <span className="shrink-0 rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800">
+> 63 |                   {product.price)}
+     |                                 ^
+  64 |                 </span>
+  65 |               </div>
+  66 |
+
+Expected '</', got ')'
+[00:01:33.977] Server  LOG     ✓ Compiled in 65ms
+[00:01:48.336] Server  LOG     ✓ Compiled in 70ms
+[00:02:16.424] Server  LOG     ✓ Compiled in 83ms
+[00:02:21.043] Server  LOG     ✓ Compiled in 70ms

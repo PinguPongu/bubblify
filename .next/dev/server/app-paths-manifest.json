@@ -1,3 +1,5 @@
 {
-  "/bubbles/page": "app/bubbles/page.js"
+  "/bubbles/page": "app/bubbles/page.js",
+  "/bundles/page": "app/bundles/page.js",
+  "/page": "app/page.js"
 }
