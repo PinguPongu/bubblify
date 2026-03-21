@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bubble } from "@/lib/api";
+import { Bubble } from "@/types/api";
 
-const API_URL = process.env.API_URL ?? "http://localhost:3500/api";
+const API_URL = "http://localhost:3500/api";
 
-async function getProducts(): Promise<Bubble[]> {
+async function getBubbles(): Promise<Bubble[]> {
   const response = await fetch(`${API_URL}/bubbles`, {
     cache: "no-store",
   });
@@ -18,20 +18,16 @@ async function getProducts(): Promise<Bubble[]> {
 
 
 export default async function BubblesPage() {
-  const products = await getProducts();
+  const bubbles = await getBubbles();
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-10">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold tracking-tight">Bubble Products</h1>
-        <p className="mt-2 text-base text-zinc-600">
-          Explore the full Bubblify collection and pick your next favorite
-          bubbles.
-        </p>
+        <h1 className="text-4xl font-bold tracking-tight">Bubbles</h1>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {products.map((product) => (
+        {bubbles.map((product) => (
           <Link
             key={product.id}
             href={`/bubbles/${product.id}`}

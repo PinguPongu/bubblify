@@ -36,7 +36,7 @@ export interface Order {
   createdAt: string;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:3500/api";
+const API_BASE_URL = "http://localhost:3500/api";
 
 async function fetchFromApi<T>(path: string): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {

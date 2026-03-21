@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CART_STORAGE_KEY, type CartItem } from "@/lib/cart";
+import { CART_STORAGE_KEY, type CartItem } from "@/types/cart";
 
 function readCartItems(): CartItem[] {
   const storedItems = window.localStorage.getItem(CART_STORAGE_KEY);
@@ -108,16 +107,6 @@ export default function CartPage() {
             <h2 className="text-2xl font-semibold text-slate-950">
               Your cart is empty
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600">
-              Add a few bubble products or a bundle first, then come back here
-              to review your order.
-            </p>
-            <Link
-              href="/bubbles"
-              className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
-            >
-              Browse products
-            </Link>
           </section>
         ) : (
           <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AddToCartButton from "../components/add-to-cart-button";
-import { getProduct } from "@/lib/api";
+import { getProduct } from "@/types/api";
 
 interface BubbleDetailPageProps {
   params: Promise<{

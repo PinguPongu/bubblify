@@ -13,15 +13,7 @@ export default function AboutPage() {
               Bubble Trouble.
             </h1>
             <p className="text-lg leading-8 text-slate-600">
-              When the bubble world lost one of its main suppliers, Bubblify
-              showed up with a simple promise: make it easy to find fun bubble
-              products again. The company was created to bring color, play, and
-              a little extra delight back to parks, parties, and backyards.
-            </p>
-            <p className="text-base leading-7 text-slate-600">
-              Today, Bubblify focuses on playful products, easy bundles, and a
-              clean online shopping experience that helps customers spend less
-              time searching and more time making bubbles.
+              Here we sell some funny bubbles.
             </p>
           </div>
         </section>

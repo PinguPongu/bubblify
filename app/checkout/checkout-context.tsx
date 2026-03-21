@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { CART_STORAGE_KEY, type CartItem } from "@/lib/cart";
+import { CART_STORAGE_KEY, type CartItem } from "@/types/cart";
 
 export type DeliveryMethod = "pickup" | "delivery";
 

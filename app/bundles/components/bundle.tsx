@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Bubble } from "@/lib/api";
+import type { Bubble } from "@/types/api";
 import AddBundleButton from "./add-bundle-button";
 
 interface BundleProps {

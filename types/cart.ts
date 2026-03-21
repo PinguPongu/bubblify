@@ -1,4 +1,4 @@
-import type { Bubble } from "@/lib/api";
+import type { Bubble } from "@/types/api";
 
 export const CART_STORAGE_KEY = "bubblify-cart";
 

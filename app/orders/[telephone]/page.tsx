@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getOrdersByTelephone } from "@/lib/api";
+import { getOrdersByTelephone } from "@/types/api";
 
 interface OrderDetailsPageProps {
   params: Promise<{
