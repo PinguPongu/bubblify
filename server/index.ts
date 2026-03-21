@@ -16,8 +16,7 @@ interface OrderCollection {
 const app: Express = express();
 const router: Router = Router();
 const PORT = 3500;
-
-let orders: OrderCollection = {};
+const orders: OrderCollection = {};
 
 const checkExistence = <T>(elems: T[], res: Response): Response => {
   return elems.length > 0
@@ -55,17 +54,25 @@ router.get("/bundles/:bundleId", (req: Request, res: Response) => {
 
 router.get("/orders/:telephone", (req: Request, res: Response) => {
   const { telephone } = req.params;
-  orders[telephone]
-    ? res.json(orders[telephone])
-    : res.status(404).send(`No orders are found for ${telephone}`);
+
+  if (orders[telephone]) {
+    res.json(orders[telephone]);
+    return;
+  }
+
+  res.status(404).send(`No orders are found for ${telephone}`);
 });
 
 router.post("/orders/:telephone", (req: Request, res: Response) => {
   const { telephone } = req.params;
   const order: Order = req.body;
-  orders[telephone]
-    ? orders[telephone].push(order)
-    : (orders[telephone] = [order]);
+
+  if (orders[telephone]) {
+    orders[telephone].push(order);
+  } else {
+    orders[telephone] = [order];
+  }
+
   res.send(`Order for ${telephone} was successfully issued!`);
 });
 

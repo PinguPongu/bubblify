@@ -1,4 +1,4 @@
-import type { Product } from "@/lib/api";
+import type { Bubble } from "@/lib/api";
 
 export const CART_STORAGE_KEY = "bubblify-cart";
 
@@ -12,7 +12,7 @@ export interface CartItem {
 
 export function addProductsToCart(
   currentItems: CartItem[],
-  products: Product[]
+  products: Bubble[]
 ): CartItem[] {
   const nextItems = [...currentItems];
 

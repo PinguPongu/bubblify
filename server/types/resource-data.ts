@@ -4,5 +4,5 @@ import { Product } from "./product";
 export interface ResourceData {
   products: Product[];
   bundles: Bundle[];
-  [key: string]: any;
+  [key: string]: Product[] | Bundle[];
 }
