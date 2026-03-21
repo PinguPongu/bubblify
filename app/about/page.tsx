@@ -13,7 +13,7 @@ export default function AboutPage() {
               Bubble Trouble.
             </h1>
             <p className="text-lg leading-8 text-slate-600">
-              Here we sell some funny bubbles.
+              Since the turn of the millennium, we have been a powerhouse in bubble production. We love Bubbles and always will.
             </p>
           </div>
         </section>

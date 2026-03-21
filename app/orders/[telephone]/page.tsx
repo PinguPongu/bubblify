@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getOrdersByTelephone } from "@/types/api";
+import { getOrdersByTelephone } from "@/services/actions";
 
 interface OrderDetailsPageProps {
   params: Promise<{
@@ -34,20 +34,9 @@ export default async function OrderDetailsPage({
             Order history
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Orders for {telephone}
+            Orders for telephone number: {telephone}
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-            These are the orders associated with the telephone number used at
-            checkout.
-          </p>
         </section>
-
-        <Link
-          href="/orders"
-          className="inline-flex text-sm font-medium text-sky-700 transition hover:text-sky-800"
-        >
-          Search another telephone number
-        </Link>
 
         <section className="space-y-6">
           {orders.map((order, index) => (

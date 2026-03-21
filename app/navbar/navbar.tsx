@@ -13,7 +13,7 @@ export default function Navbar() {
               Bubblify
             </span>
             <span className="text-xs uppercase tracking-[0.28em] text-sky-700">
-              Only bubbles
+              We love Bubbles.
             </span>
           </span>
         </Link>

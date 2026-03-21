@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { addProductsToCart, CART_STORAGE_KEY, type CartItem } from "@/types/cart";
-import type { Bubble } from "@/types/api";
+import { CartItem, Bubble } from "@/types/types";
+import { addProductsToCart, CART_STORAGE_KEY } from '@/services/actions'
 
 interface AddBundleButtonProps {
   products: Bubble[];

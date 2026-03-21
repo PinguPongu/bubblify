@@ -1,21 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bubble } from "@/types/api";
-
-const API_URL = "http://localhost:3500/api";
-
-async function getBubbles(): Promise<Bubble[]> {
-  const response = await fetch(`${API_URL}/bubbles`, {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch bubble products.");
-  }
-
-  return response.json();
-}
-
+import { getBubbles } from '@/services/actions'
 
 export default async function BubblesPage() {
   const bubbles = await getBubbles();

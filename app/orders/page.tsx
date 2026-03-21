@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { getOrdersByTelephone } from "@/types/api";
+import { getOrdersByTelephone } from "@/services/actions";
 
 interface OrdersPageProps {
   searchParams: Promise<{

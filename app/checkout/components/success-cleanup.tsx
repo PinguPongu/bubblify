@@ -48,12 +48,6 @@ export default function SuccessCleanup({
         >
           View past orders
         </Link>
-        <Link
-          href="/bubbles"
-          className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-        >
-          Shop more bubbles
-        </Link>
       </div>
     </section>
   );

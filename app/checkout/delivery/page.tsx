@@ -1,30 +1,25 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCheckout, type DeliveryMethod } from "../checkout-context";
 
 const deliveryOptions: Array<{
   value: DeliveryMethod;
   title: string;
-  description: string;
 }> = [
   {
     value: "pickup",
     title: "Store pickup",
-    description: "Pick the order up yourself and keep the process quick.",
   },
   {
     value: "delivery",
     title: "Home delivery",
-    description: "Have the bubbles sent out with your full address details.",
   },
 ];
 
 export default function DeliveryPage() {
   const router = useRouter();
-  const { hasHydrated, cartItems, deliveryMethod, setDeliveryMethod } =
-    useCheckout();
+  const { notLoading, cartItems, deliveryMethod, setDeliveryMethod } = useCheckout();
 
   const handleContinue = () => {
     if (!deliveryMethod) {
@@ -34,7 +29,7 @@ export default function DeliveryPage() {
     router.push("/checkout/info");
   };
 
-  if (!hasHydrated) {
+  if (!notLoading) {
     return (
       <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <p className="text-base text-slate-600">Loading checkout...</p>
@@ -49,14 +44,8 @@ export default function DeliveryPage() {
           Your cart is empty
         </h2>
         <p className="mt-3 text-sm leading-7 text-slate-600">
-          Add products before starting the checkout flow.
+          Add products before checking out.
         </p>
-        <Link
-          href="/bubbles"
-          className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
-        >
-          Browse products
-        </Link>
       </section>
     );
   }
@@ -83,9 +72,6 @@ export default function DeliveryPage() {
             <h2 className="mt-4 text-2xl font-semibold text-slate-950">
               {option.title}
             </h2>
-            <p className="mt-3 text-sm leading-7 text-slate-600">
-              {option.description}
-            </p>
           </button>
         );
       })}

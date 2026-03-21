@@ -16,7 +16,7 @@ interface ValidationErrors {
 export default function CheckoutInfoPage() {
   const router = useRouter();
   const {
-    hasHydrated,
+    notLoading: hasHydrated,
     deliveryMethod,
     customerInfo,
     cartItems,

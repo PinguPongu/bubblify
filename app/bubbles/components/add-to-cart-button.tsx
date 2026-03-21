@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import type { Bubble } from "@/types/api";
-import { addProductsToCart, CART_STORAGE_KEY, type CartItem } from "@/types/cart";
+import type { Bubble, CartItem } from "@/types/types";
+import { addProductsToCart, CART_STORAGE_KEY } from "@/services/actions";
 
 interface AddToCartButtonProps {
-  product: Bubble;
+  bubble: Bubble;
 }
 
 export default function AddToCartButton({
-  product,
+  bubble,
 }: AddToCartButtonProps) {
   const [isAdded, setIsAdded] = useState(false);
 
@@ -25,7 +25,7 @@ export default function AddToCartButton({
       }
     }
 
-    const nextItems = addProductsToCart(parsedItems, [product]);
+    const nextItems = addProductsToCart(parsedItems, [bubble]);
 
     window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(nextItems));
     setIsAdded(true);

@@ -1,19 +1,20 @@
 import Bundle from "./components/bundle";
-import { getBundles, getProducts, type Bubble } from "@/types/api";
+import { Bubble } from "@/types/types";
+import { getBundles, getBubbles } from '@/services/actions'
 
-function isProduct(product: Bubble | undefined): product is Bubble {
-  return product !== undefined;
+function isBubble(bubble: Bubble | undefined): bubble is Bubble {
+  return bubble !== undefined;
 }
 
 export default async function Bundles() {
-  const [bundles, products] = await Promise.all([getBundles(), getProducts()]);
-  const productsById = new Map(products.map((product) => [product.id, product]));
+  const [bundles, bubbles] = await Promise.all([getBundles(), getBubbles()]);
+  const bubblesById = new Map(bubbles.map((product) => [product.id, product]));
   const resolvedBundles = bundles.map((bundle) => ({
     id: bundle.id,
     name: bundle.name,
-    products: bundle.items
-      .map((itemId) => productsById.get(itemId))
-      .filter(isProduct),
+    bubbles: bundle.items
+      .map((itemId) => bubblesById.get(itemId))
+      .filter(isBubble),
   }));
 
   return (

@@ -7,7 +7,8 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { CART_STORAGE_KEY, type CartItem } from "@/types/cart";
+import { CartItem } from "@/types/types";
+import { CART_STORAGE_KEY } from "@/services/actions"
 
 export type DeliveryMethod = "pickup" | "delivery";
 
@@ -20,7 +21,7 @@ export interface CustomerInfo {
 }
 
 interface CheckoutContextValue {
-  hasHydrated: boolean;
+  notLoading: boolean;
   deliveryMethod: DeliveryMethod | null;
   customerInfo: CustomerInfo;
   cartItems: CartItem[];
@@ -85,7 +86,7 @@ function readCartItems(): CartItem[] {
 }
 
 export function CheckoutProvider({ children }: CheckoutProviderProps) {
-  const [hasHydrated, setHasHydrated] = useState(false);
+  const [notLoading, setNotLoading] = useState(false);
   const [deliveryMethod, setDeliveryMethodState] =
     useState<DeliveryMethod | null>(null);
   const [customerInfo, setCustomerInfo] =
@@ -99,7 +100,7 @@ export function CheckoutProvider({ children }: CheckoutProviderProps) {
       setDeliveryMethodState(checkoutState.deliveryMethod);
       setCustomerInfo(checkoutState.customerInfo);
       setCartItems(readCartItems());
-      setHasHydrated(true);
+      setNotLoading(true);
     });
 
     return () => {
@@ -108,7 +109,7 @@ export function CheckoutProvider({ children }: CheckoutProviderProps) {
   }, []);
 
   useEffect(() => {
-    if (!hasHydrated) {
+    if (!notLoading) {
       return;
     }
 
@@ -121,7 +122,7 @@ export function CheckoutProvider({ children }: CheckoutProviderProps) {
       CHECKOUT_STORAGE_KEY,
       JSON.stringify(nextState)
     );
-  }, [customerInfo, deliveryMethod, hasHydrated]);
+  }, [customerInfo, deliveryMethod, notLoading]);
 
   const setDeliveryMethod = (method: DeliveryMethod) => {
     setDeliveryMethodState(method);
@@ -150,7 +151,7 @@ export function CheckoutProvider({ children }: CheckoutProviderProps) {
   return (
     <CheckoutContext.Provider
       value={{
-        hasHydrated,
+        notLoading: notLoading,
         deliveryMethod,
         customerInfo,
         cartItems,

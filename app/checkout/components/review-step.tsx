@@ -12,7 +12,7 @@ interface ReviewStepProps {
 export default function ReviewStep({ submitAction }: ReviewStepProps) {
   const router = useRouter();
   const {
-    hasHydrated,
+    notLoading: hasHydrated,
     deliveryMethod,
     customerInfo,
     cartItems,

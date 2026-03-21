@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CART_STORAGE_KEY, type CartItem } from "@/types/cart";
+import { type CartItem } from "@/types/types";
+import { CART_STORAGE_KEY } from '@/services/actions'
 
 function readCartItems(): CartItem[] {
   const storedItems = window.localStorage.getItem(CART_STORAGE_KEY);
@@ -92,10 +93,6 @@ export default function CartPage() {
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
             Your selected bubbles
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-            Review your items, adjust quantities, and continue to checkout when
-            everything looks right.
-          </p>
         </section>
 
         {!hasLoaded ? (

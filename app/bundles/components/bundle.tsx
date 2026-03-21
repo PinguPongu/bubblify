@@ -1,17 +1,17 @@
 import Image from "next/image";
-import type { Bubble } from "@/types/api";
+import type { Bubble } from "@/types/types";
 import AddBundleButton from "./add-bundle-button";
 
 interface BundleProps {
   id: number;
   name: string;
-  products: Bubble[];
+  bubbles: Bubble[];
 }
 
 
-export default function Bundle({ id, name, products }: BundleProps) {
-  const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
-  const previewImage = products[0];
+export default function Bundle({ id, name, bubbles }: BundleProps) {
+  const totalPrice = bubbles.reduce((sum, bubble) => sum + bubble.price, 0);
+  const previewImage = bubbles[0];
 
   return (
     <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
@@ -37,13 +37,12 @@ export default function Bundle({ id, name, products }: BundleProps) {
               {name}
             </h2>
             <p className="text-sm leading-6 text-slate-600">
-              A ready-made mix of {products.length} bubble products for gifting,
-              events, or a faster checkout.
+              This bundle contains {bubbles.length} Bubbles:
             </p>
           </div>
 
           <ul className="space-y-2 text-sm text-slate-600">
-            {products.map((product) => (
+            {bubbles.map((product) => (
               <li
                 key={product.id}
                 className="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3"
@@ -64,7 +63,7 @@ export default function Bundle({ id, name, products }: BundleProps) {
             </p>
             <p className="flex justify-between items-center text-3xl font-semibold text-slate-950">
               {totalPrice} ISK
-              <AddBundleButton products={products} />
+              <AddBundleButton products={bubbles} />
             </p>
           </div> 
         </div>
