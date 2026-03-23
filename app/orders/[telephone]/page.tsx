@@ -27,10 +27,10 @@ export default async function OrderDetailsPage({
   }
 
   return (
-    <main className="px-6 py-10 text-slate-950">
+    <main className="px-6 py-10 text-stone-900">
       <div className="mx-auto flex max-w-5xl flex-col gap-8">
-        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-700">
+        <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] px-8 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-700">
             Order history
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -42,34 +42,34 @@ export default async function OrderDetailsPage({
           {orders.map((order, index) => (
             <article
               key={`${order.createdAt}-${index}`}
-              className="rounded-3xl border border-slate-200 bg-white p-8"
+              className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
+                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
                     Order {index + 1}
                   </p>
-                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-stone-900">
                     {order.customer.name}
                   </h2>
-                  <p className="mt-2 text-sm text-slate-600">
+                  <p className="mt-2 text-sm text-stone-600">
                     {order.deliveryMethod === "pickup"
                       ? "Store pickup"
                       : "Home delivery"}
                   </p>
                   {order.deliveryMethod === "delivery" ? (
-                    <p className="mt-1 text-sm text-slate-600">
+                    <p className="mt-1 text-sm text-stone-600">
                       {order.customer.address}, {order.customer.postalCode}{" "}
                       {order.customer.city}
                     </p>
                   ) : null}
                 </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+                <div className="rounded-2xl border-2 border-orange-200 bg-[#fff0dd] px-4 py-3">
+                  <p className="text-xs uppercase tracking-[0.2em] text-orange-700">
                     Total
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-slate-950">
+                  <p className="mt-2 text-2xl font-semibold text-stone-900">
                     {order.totalPrice} ISK
                   </p>
                 </div>
@@ -79,12 +79,12 @@ export default async function OrderDetailsPage({
                 {order.items.map((item) => (
                   <li
                     key={item.id}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-600"
+                    className="flex items-center justify-between gap-4 rounded-2xl border-2 border-orange-200 bg-[#fff0dd] px-4 py-4 text-sm text-stone-600"
                   >
                     <span>
                       {item.name} x {item.quantity}
                     </span>
-                    <span className="font-medium text-slate-950">
+                    <span className="font-medium text-stone-900">
                       {item.price * item.quantity} ISK
                     </span>
                   </li>

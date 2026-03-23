@@ -24,19 +24,19 @@ export default function SuccessCleanup({
   }, [clearCheckout]);
 
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
+    <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
         Success
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900">
         Your order was placed successfully
       </h2>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+      <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">
         Bubblify has received your order and the cart has been cleared for the
         next round of bubbles.
       </p>
       {telephone ? (
-        <p className="mt-4 text-sm text-slate-500">
+        <p className="mt-4 text-sm text-stone-500">
           Reference telephone: {telephone}
         </p>
       ) : null}
@@ -44,7 +44,7 @@ export default function SuccessCleanup({
       <div className="mt-8 flex flex-wrap gap-4">
         <Link
           href="/orders"
-          className="rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+          className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
         >
           View past orders
         </Link>

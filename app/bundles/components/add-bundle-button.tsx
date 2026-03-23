@@ -39,7 +39,7 @@ export default function AddBundleButton({
     <button
       type="button"
       onClick={handleClick}
-      className="rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+      className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
     >
       {isAdded ? "Added to cart" : "Add Bundle to Cart"}
     </button>

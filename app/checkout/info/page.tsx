@@ -77,24 +77,24 @@ export default function CheckoutInfoPage() {
 
   if (!hasHydrated) {
     return (
-      <section className="rounded-3xl border border-slate-200 bg-white p-8">
-        <p className="text-base text-slate-600">Loading checkout...</p>
+      <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
+        <p className="text-base text-stone-600">Loading checkout...</p>
       </section>
     );
   }
 
   if (cartItems.length === 0) {
     return (
-      <section className="rounded-3xl border border-slate-200 bg-white p-8">
-        <h2 className="text-2xl font-semibold text-slate-950">
+      <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
+        <h2 className="text-2xl font-semibold text-stone-900">
           Your cart is empty
         </h2>
-        <p className="mt-3 text-sm leading-7 text-slate-600">
+        <p className="mt-3 text-sm leading-7 text-stone-600">
           Add products before starting the checkout flow.
         </p>
         <Link
           href="/bubbles"
-          className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+          className="mt-6 inline-flex rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
         >
           Browse products
         </Link>
@@ -103,11 +103,11 @@ export default function CheckoutInfoPage() {
   }
 
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
+    <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
         Customer details
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900">
         {deliveryMethod === "pickup"
           ? "Tell us who is picking up"
           : "Where should we send the order?"}
@@ -115,14 +115,14 @@ export default function CheckoutInfoPage() {
 
       <form onSubmit={handleSubmit} className="mt-8 grid gap-6 md:grid-cols-2">
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-slate-700">Name</span>
+          <span className="text-sm font-medium text-stone-700">Name</span>
           <input
             type="text"
             value={customerInfo.name}
             onChange={(event) =>
               updateCustomerInfo({ name: event.target.value })
             }
-            className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+            className="rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
           />
           {errors.name ? (
             <span className="text-sm text-rose-600">{errors.name}</span>
@@ -130,14 +130,14 @@ export default function CheckoutInfoPage() {
         </label>
 
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-slate-700">Telephone</span>
+          <span className="text-sm font-medium text-stone-700">Telephone</span>
           <input
             type="tel"
             value={customerInfo.telephone}
             onChange={(event) =>
               updateCustomerInfo({ telephone: event.target.value })
             }
-            className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+            className="rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
           />
           {errors.telephone ? (
             <span className="text-sm text-rose-600">{errors.telephone}</span>
@@ -147,14 +147,14 @@ export default function CheckoutInfoPage() {
         {deliveryMethod === "delivery" ? (
           <>
             <label className="flex flex-col gap-2 md:col-span-2">
-              <span className="text-sm font-medium text-slate-700">Address</span>
+              <span className="text-sm font-medium text-stone-700">Address</span>
               <input
                 type="text"
                 value={customerInfo.address}
                 onChange={(event) =>
                   updateCustomerInfo({ address: event.target.value })
                 }
-                className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+                className="rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
               />
               {errors.address ? (
                 <span className="text-sm text-rose-600">{errors.address}</span>
@@ -162,14 +162,14 @@ export default function CheckoutInfoPage() {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-medium text-slate-700">City</span>
+              <span className="text-sm font-medium text-stone-700">City</span>
               <input
                 type="text"
                 value={customerInfo.city}
                 onChange={(event) =>
                   updateCustomerInfo({ city: event.target.value })
                 }
-                className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+                className="rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
               />
               {errors.city ? (
                 <span className="text-sm text-rose-600">{errors.city}</span>
@@ -177,7 +177,7 @@ export default function CheckoutInfoPage() {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-medium text-slate-700">
+              <span className="text-sm font-medium text-stone-700">
                 Postal code
               </span>
               <input
@@ -186,7 +186,7 @@ export default function CheckoutInfoPage() {
                 onChange={(event) =>
                   updateCustomerInfo({ postalCode: event.target.value })
                 }
-                className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+                className="rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
               />
               {errors.postalCode ? (
                 <span className="text-sm text-rose-600">
@@ -200,13 +200,13 @@ export default function CheckoutInfoPage() {
         <div className="flex flex-wrap gap-4 md:col-span-2">
           <Link
             href="/checkout/delivery"
-            className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+            className="rounded-full border-2 border-orange-200 bg-[#fff3e4] px-5 py-3 text-sm font-semibold text-stone-700 transition hover:bg-orange-100"
           >
             Back
           </Link>
           <button
             type="submit"
-            className="rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+            className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
           >
             Continue to review
           </button>

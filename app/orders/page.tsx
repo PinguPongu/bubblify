@@ -31,39 +31,39 @@ export default async function OrdersPage({ searchParams }: OrdersPageProps) {
   }
 
   return (
-    <main className="px-6 py-10 text-slate-950">
+    <main className="px-6 py-10 text-stone-900">
       <div className="mx-auto flex max-w-4xl flex-col gap-8">
-        <section className="rounded-3xl border border-slate-200 bg-white px-8 py-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-700">
+        <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] px-8 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-700">
             Orders
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
             Find your previous order
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">
             Enter the telephone number used during checkout to look up your past
             Bubblify orders.
           </p>
         </section>
 
-        <section className="rounded-3xl border border-slate-200 bg-white p-8">
+        <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
           <form className="flex flex-col gap-4 sm:flex-row sm:items-end">
             <label className="flex-1">
-              <span className="mb-2 block text-sm font-medium text-slate-700">
+              <span className="mb-2 block text-sm font-medium text-stone-700">
                 Telephone number
               </span>
               <input
                 type="tel"
                 name="telephone"
                 defaultValue={trimmedTelephone}
-                className="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400"
+                className="w-full rounded-2xl border-2 border-orange-200 bg-white px-4 py-3 outline-none transition focus:border-orange-400"
                 placeholder="5812345"
               />
             </label>
 
             <button
               type="submit"
-              className="rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+              className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
             >
               Search orders
             </button>

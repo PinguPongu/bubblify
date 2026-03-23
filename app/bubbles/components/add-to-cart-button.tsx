@@ -39,7 +39,7 @@ export default function AddToCartButton({
     <button
       type="button"
       onClick={handleClick}
-      className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-700"
+      className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
     >
       {isAdded ? "Added to cart" : "Add to cart"}
     </button>
