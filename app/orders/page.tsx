@@ -1,10 +1,12 @@
 import { redirect } from "next/navigation";
 import { getOrdersByTelephone } from "@/services/actions";
 
+
+// Hér fáum við inn searchParams sem er ojbect sem inniheldur promise af mögulegu símanúmeri. 
+// Fyrst þegar síðan er loaduð eru propsin tóm en þegar leitað er að símanúmeri fær síðan sjálf það sem props,
+// tjekkar hvort einhver símanúmer matchi og sendir mann yfir á orders/[phonenumber] 
 interface OrdersPageProps {
-  searchParams: Promise<{
-    telephone?: string;
-  }>;
+  searchParams: Promise<{ telephone?: string; }>;
 }
 
 async function hasOrders(telephone: string): Promise<boolean> {

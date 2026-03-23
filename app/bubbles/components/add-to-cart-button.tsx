@@ -4,13 +4,12 @@ import { useState } from "react";
 import type { Bubble, CartItem } from "@/types/types";
 import { addProductsToCart, CART_STORAGE_KEY } from "@/services/actions";
 
+// Hér fáum við inn Bubble til að bæta við í cartið
 interface AddToCartButtonProps {
   bubble: Bubble;
 }
 
-export default function AddToCartButton({
-  bubble,
-}: AddToCartButtonProps) {
+export default function AddToCartButton({ bubble }: AddToCartButtonProps) {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleClick = () => {

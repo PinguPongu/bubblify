@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { CartItem } from "@/types/types";
 import { CART_STORAGE_KEY } from "@/services/actions"
 
@@ -31,6 +25,7 @@ interface CheckoutContextValue {
   clearCheckout: () => void;
 }
 
+// F'aum b-rnin in til þess að geta síðan renderað þau
 interface CheckoutProviderProps {
   children: ReactNode;
 }
@@ -87,10 +82,8 @@ function readCartItems(): CartItem[] {
 
 export function CheckoutProvider({ children }: CheckoutProviderProps) {
   const [notLoading, setNotLoading] = useState(false);
-  const [deliveryMethod, setDeliveryMethodState] =
-    useState<DeliveryMethod | null>(null);
-  const [customerInfo, setCustomerInfo] =
-    useState<CustomerInfo>(defaultCustomerInfo);
+  const [deliveryMethod, setDeliveryMethodState] = useState<DeliveryMethod | null>(null);
+  const [customerInfo, setCustomerInfo] = useState<CustomerInfo>(defaultCustomerInfo);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
@@ -144,8 +137,7 @@ export function CheckoutProvider({ children }: CheckoutProviderProps) {
   };
 
   const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
+    (sum, item) => sum + item.price * item.quantity, 0
   );
 
   return (

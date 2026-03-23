@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useCheckout } from "../checkout-context";
 
+
+// Hér propdrillum fallinu submitOrder sem submitAction proppi, sem tekur við formdatainu og submittar því
 interface ReviewStepProps {
   submitAction: (formData: FormData) => Promise<void>;
 }
@@ -12,7 +14,7 @@ interface ReviewStepProps {
 export default function ReviewStep({ submitAction }: ReviewStepProps) {
   const router = useRouter();
   const {
-    notLoading: hasHydrated,
+    notLoading,
     deliveryMethod,
     customerInfo,
     cartItems,
@@ -20,7 +22,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
   } = useCheckout();
 
   useEffect(() => {
-    if (!hasHydrated) {
+    if (!notLoading) {
       return;
     }
 
@@ -32,9 +34,9 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
     if (!customerInfo.name || !customerInfo.telephone) {
       router.replace("/checkout/info");
     }
-  }, [customerInfo.name, customerInfo.telephone, deliveryMethod, hasHydrated, router]);
+  }, [customerInfo.name, customerInfo.telephone, deliveryMethod, notLoading, router]);
 
-  if (!hasHydrated) {
+  if (!notLoading) {
     return (
       <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
         <p className="text-base text-stone-600">Loading checkout...</p>

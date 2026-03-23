@@ -16,7 +16,7 @@ interface ValidationErrors {
 export default function CheckoutInfoPage() {
   const router = useRouter();
   const {
-    notLoading: hasHydrated,
+    notLoading,
     deliveryMethod,
     customerInfo,
     cartItems,
@@ -25,14 +25,14 @@ export default function CheckoutInfoPage() {
   const [errors, setErrors] = useState<ValidationErrors>({});
 
   useEffect(() => {
-    if (!hasHydrated) {
+    if (!notLoading) {
       return;
     }
 
     if (!deliveryMethod) {
       router.replace("/checkout/delivery");
     }
-  }, [deliveryMethod, hasHydrated, router]);
+  }, [deliveryMethod, notLoading, router]);
 
   const validate = () => {
     const nextErrors: ValidationErrors = {};
@@ -75,7 +75,7 @@ export default function CheckoutInfoPage() {
     router.push("/checkout/review");
   };
 
-  if (!hasHydrated) {
+  if (!notLoading) {
     return (
       <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
         <p className="text-base text-stone-600">Loading checkout...</p>

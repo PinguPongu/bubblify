@@ -1,5 +1,6 @@
 import { CheckoutProvider } from "./checkout-context";
 
+// Hér fáum við inn börnin sem við getum síðan renderað
 interface CheckoutLayoutProps {
   children: React.ReactNode;
 }
@@ -18,7 +19,7 @@ export default function CheckoutLayout({ children }: CheckoutLayoutProps) {
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">
               Choose delivery, enter your details, review the order, and
-              confirm when everything looks right.
+              confirm.
             </p>
           </section>
           {children}

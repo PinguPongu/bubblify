@@ -2,12 +2,12 @@ import Image from "next/image";
 import type { Bubble } from "@/types/types";
 import AddBundleButton from "./add-bundle-button";
 
+// Hér fáum við inn BundleProps sem heldur utan um hvað Bubbles Bundle'inn inniheldur, id og nafn
 interface BundleProps {
   id: number;
   name: string;
   bubbles: Bubble[];
 }
-
 
 export default function Bundle({ id, name, bubbles }: BundleProps) {
   const totalPrice = bubbles.reduce((sum, bubble) => sum + bubble.price, 0);

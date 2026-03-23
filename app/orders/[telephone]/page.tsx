@@ -1,11 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getOrdersByTelephone } from "@/services/actions";
 
+// Hér fáum við inn símanúmerið sem ákvarðar slóðina. Við finnum tilheyrandi pöntun og sínum hana.
 interface OrderDetailsPageProps {
-  params: Promise<{
-    telephone: string;
-  }>;
+  params: Promise<{ telephone: string; }>;
 }
 
 async function getOrdersOrNull(telephone: string) {

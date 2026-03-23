@@ -4,13 +4,13 @@ import { useState } from "react";
 import { CartItem, Bubble } from "@/types/types";
 import { addProductsToCart, CART_STORAGE_KEY } from '@/services/actions'
 
+// Hér fáum við inn lista af Bubbles, sem samsvara hvaða Bubbles eru í 
+// Bundle. Þessar Bubbles eru síðan settar í cartið í staðinn fyrir allan bundle'inn.
 interface AddBundleButtonProps {
   products: Bubble[];
 }
 
-export default function AddBundleButton({
-  products,
-}: AddBundleButtonProps) {
+export default function AddBundleButton({ products }: AddBundleButtonProps) {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleClick = () => {

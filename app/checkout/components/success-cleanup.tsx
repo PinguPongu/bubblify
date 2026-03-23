@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useCheckout } from "../checkout-context";
 
+
+// Hér tökum við símanúmeri sem er einungis notað til þess að sýna reference símanúmer pöntunarinnar
 interface SuccessCleanupProps {
   telephone?: string;
 }
 
-export default function SuccessCleanup({
-  telephone,
-}: SuccessCleanupProps) {
+export default function SuccessCleanup({ telephone }: SuccessCleanupProps) {
   const { clearCheckout } = useCheckout();
 
   useEffect(() => {
@@ -32,8 +32,7 @@ export default function SuccessCleanup({
         Your order was placed successfully
       </h2>
       <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">
-        Bubblify has received your order and the cart has been cleared for the
-        next round of bubbles.
+        Bubblify has received your order.
       </p>
       {telephone ? (
         <p className="mt-4 text-sm text-stone-500">
