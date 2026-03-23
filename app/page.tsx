@@ -7,10 +7,10 @@ export default function Home() {
         <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] px-8 py-12 md:px-12 md:py-16">
           <div className="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
             <div className="max-w-3xl space-y-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-700">
+              <p className="text-sm font-semibold uppercase text-orange-700">
                 Bubblify
               </p>
-              <h1 className="text-5xl font-semibold tracking-tight text-stone-900 sm:text-6xl">
+              <h1 className="text-5xl font-semibold text-stone-900 sm:text-6xl">
                 No troubles.
                 <br />
                 Only bubbles.

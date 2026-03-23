@@ -57,10 +57,10 @@ export default async function BubbleDetailPage({params}: BubbleDetailPageProps) 
 
             <div className="flex flex-col justify-between gap-8 p-8 lg:p-10">
               <div className="space-y-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+                <p className="text-sm font-semibold uppercase text-orange-700">
                   Bubble #{bubble.id}
                 </p>
-                <h1 className="text-4xl font-semibold tracking-tight text-stone-900 sm:text-5xl">
+                <h1 className="text-4xl font-semibold text-stone-900 sm:text-5xl">
                   {bubble.name}
                 </h1>
                 <p className="text-lg leading-8 text-stone-600">
@@ -70,7 +70,7 @@ export default async function BubbleDetailPage({params}: BubbleDetailPageProps) 
 
               <div className="space-y-6">
                 <div className="rounded-2xl border-2 border-orange-200 bg-[#fff0dd] px-6 py-5">
-                  <p className="text-xs uppercase tracking-[0.24em] text-orange-700">
+                  <p className="text-xs uppercase text-orange-700">
                     Price
                   </p>
                   <p className="mt-2 text-4xl font-semibold text-stone-900">

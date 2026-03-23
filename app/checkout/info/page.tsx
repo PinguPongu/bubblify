@@ -104,10 +104,10 @@ export default function CheckoutInfoPage() {
 
   return (
     <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+      <p className="text-sm font-semibold uppercase text-orange-700">
         Customer details
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900">
+      <h2 className="mt-4 text-3xl font-semibold text-stone-900">
         {deliveryMethod === "pickup"
           ? "Tell us who is picking up"
           : "Where should we send the order?"}

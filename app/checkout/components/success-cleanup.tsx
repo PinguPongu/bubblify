@@ -25,10 +25,10 @@ export default function SuccessCleanup({ telephone }: SuccessCleanupProps) {
 
   return (
     <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+      <p className="text-sm font-semibold uppercase text-orange-700">
         Success
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900">
+      <h2 className="mt-4 text-3xl font-semibold text-stone-900">
         Your order was placed successfully
       </h2>
       <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">

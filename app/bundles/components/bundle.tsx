@@ -25,7 +25,7 @@ export default function Bundle({ id, name, bubbles }: BundleProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
         ) : null}
-        <div className="absolute left-5 top-5 rounded-full border-2 border-orange-200 bg-[#fffaf4] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-orange-700">
+        <div className="absolute left-5 top-5 rounded-full border-2 border-orange-200 bg-[#fffaf4] px-3 py-1 text-xs font-semibold uppercase text-orange-700">
           Bundle #{id}
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function Bundle({ id, name, bubbles }: BundleProps) {
       <div className="flex h-full flex-col gap-5 p-6">
         <div className="space-y-3">
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold tracking-tight text-stone-900">
+            <h2 className="text-2xl font-semibold text-stone-900">
               {name}
             </h2>
             <p className="text-sm leading-6 text-stone-600">
@@ -58,7 +58,7 @@ export default function Bundle({ id, name, bubbles }: BundleProps) {
 
         <div>
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-orange-700">
+            <p className="text-xs uppercase text-orange-700">
               Bundle total
             </p>
             <p className="flex items-center justify-between text-3xl font-semibold text-stone-900">

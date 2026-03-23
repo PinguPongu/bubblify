@@ -87,10 +87,10 @@ export default function CartPage() {
     <main className="px-6 py-10 text-stone-900">
       <div className="mx-auto flex max-w-6xl flex-col gap-8">
         <section className="rounded-3xl border-2 border-orange-200 bg-[#fffaf4] px-8 py-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-700">
+          <p className="text-sm font-semibold uppercase text-orange-700">
             Cart
           </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Your selected bubbles
           </h1>
         </section>
@@ -126,7 +126,7 @@ export default function CartPage() {
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                       <div>
-                        <h2 className="text-2xl font-semibold tracking-tight text-stone-900">
+                        <h2 className="text-2xl font-semibold text-stone-900">
                           {item.name}
                         </h2>
                         <p className="mt-1 text-sm text-stone-500">
@@ -176,7 +176,7 @@ export default function CartPage() {
             </section>
 
             <aside className="h-fit rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+              <p className="text-sm font-semibold uppercase text-orange-700">
                 Summary
               </p>
               <div className="mt-6 space-y-4">

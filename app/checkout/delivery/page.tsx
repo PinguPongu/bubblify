@@ -66,7 +66,7 @@ export default function DeliveryPage() {
                 : "border-orange-200 bg-[#fffaf4] hover:border-orange-300"
             }`}
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+            <p className="text-sm font-semibold uppercase text-orange-700">
               Option
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-stone-900">

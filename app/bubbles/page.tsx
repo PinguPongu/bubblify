@@ -8,7 +8,7 @@ export default async function BubblesPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-10 text-stone-900">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold tracking-tight">Bubbles</h1>
+        <h1 className="text-4xl font-bold">Bubbles</h1>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

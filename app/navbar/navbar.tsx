@@ -9,10 +9,10 @@ export default function Navbar() {
             B
           </span>
           <span className="flex flex-col leading-none">
-            <span className="text-lg font-semibold tracking-tight">
+            <span className="text-lg font-semibold">
               Bubblify
             </span>
-            <span className="text-xs uppercase tracking-[0.28em] text-orange-700">
+            <span className="text-xs uppercase text-orange-700">
               We love Bubbles.
             </span>
           </span>

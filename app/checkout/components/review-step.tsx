@@ -67,10 +67,10 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
     <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
       <section className="space-y-6 rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-8">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+          <p className="text-sm font-semibold uppercase text-orange-700">
             Review
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900">
+          <h2 className="mt-3 text-3xl font-semibold text-stone-900">
             Confirm your order
           </h2>
         </div>
@@ -117,7 +117,7 @@ export default function ReviewStep({ submitAction }: ReviewStepProps) {
       </section>
 
       <aside className="h-fit rounded-3xl border-2 border-orange-200 bg-[#fffaf4] p-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-700">
+        <p className="text-sm font-semibold uppercase text-orange-700">
           Final total
         </p>
         <p className="mt-3 text-4xl font-semibold text-stone-900">
